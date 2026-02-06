@@ -1,37 +1,55 @@
 # Ranger & z
 
-This plugin integrates [z](https://github.com/rupa/z) with [ranger](https://github.com/ranger/ranger).The plugin uses `.z` file to jump around, watch [screencast](https://youtu.be/ciHHbFtz4N8).
+This plugin integrates [z](https://github.com/rupa/z) with [ranger](https://github.com/ranger/ranger). It uses the `.z` database to enable quick directory jumping inside ranger. You can watch a demo in this [screencast](https://youtu.be/ciHHbFtz4N8).
 
-This branch currently only supports [z](https://github.com/rupa/z), if you wanted to use [zsh-z](https://github.com/agkozak/zsh-z) please see the [master](https://github.com/ask1234560/ranger-zjumper/tree/master) branch.
+> **Note:**
+> This branch supports only [z](https://github.com/rupa/z).
+> If you want to use [zsh-z](https://github.com/agkozak/zsh-z), see the [master branch](https://github.com/ask1234560/ranger-zjumper/tree/master).
 
-## Requirement
+---
 
-- set `_Z_SRC` to path to z.sh
+## Requirements
+
+* Set the `_Z_SRC` environment variable to the path of `z.sh`.
+
+---
 
 ## Installation
 
-```
-cd "${XDG_CONFIG_HOME:-$HOME/.config}"/ranger/plugins
+```bash
+cd "${XDG_CONFIG_HOME:-$HOME/.config}/ranger/plugins"
 git clone https://github.com/ask1234560/ranger-zjumper.git
+
 echo -e "# z jumper\nmap cz console z%space" >> "${XDG_CONFIG_HOME:-$HOME/.config}"/ranger/rc.conf
-restart ranger
 ```
+
+Restart ranger after installation.
+
+---
 
 ## Usage
 
-- Type `:z dir` to go to `.*/dir` or `:z dir1 dir2 ... dirn` to go to `.*/dir1.*/dir2....*/dirn`
-- Or press c followed by z, followed by `dir` or `dir1 dir2 ... dirn`
-- `dir` is case insensitive
+* Run `:z dir` to jump to directories matching `.*/dir`
+* Run `:z dir1 dir2 ... dirn` to jump to directories matching `.*/dir1.*/dir2....*/dirn`
+* Alternatively:
 
-## Updation
+  * Press `c`, then `z`, then type your directory query
+* Directory matching is case-insensitive.
 
-For updating the plugin.
+---
 
-```
-cd "${XDG_CONFIG_HOME:-$HOME/.config}"/ranger/plugins/ranger-zjumper
+## Updating
+
+To update the plugin:
+
+```bash
+cd "${XDG_CONFIG_HOME:-$HOME/.config}/ranger/plugins/ranger-zjumper"
 git pull
 ```
 
+---
+
 ## See Also
 
-[ranger-zoxide](https://github.com/jchook/ranger-zoxide/tree/master)
+* [ranger-zoxide](https://github.com/jchook/ranger-zoxide/tree/master)
+
