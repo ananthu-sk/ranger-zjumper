@@ -29,12 +29,9 @@ Restart ranger after installation.
 
 ## Usage
 
-* Run `:z dir` to jump to directories matching `.*/dir`
-* Run `:z dir1 dir2 ... dirn` to jump to directories matching `.*/dir1.*/dir2....*/dirn`
+* Run `:z dir` to jump to directory.
 * Alternatively:
-
-  * Press `c`, then `z`, then type your directory query
-* Directory matching is case-insensitive.
+  * Press `c`, then `z`, then type your directory query.
 
 ---
 
